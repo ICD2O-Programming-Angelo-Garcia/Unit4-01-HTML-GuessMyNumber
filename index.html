@@ -1,9 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Guess the number game" />
+    <meta name="keywords" content="immaculata, ics2o" />
+    <meta name="author" content="Angelo Garcia" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Number Game</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css" />
   </head>
   <body>
-    <p>Paragraph</p>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <!-- Link to your custom script file -->
+    <script src="script.js"></script>
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Guess the Number Game</span>
+        </div>
+      </header>
+
+      <main class="mdl-layout__content">
+      
+
+        <!-- Random number input -->
+        <form action="#">
+          <p>Guess a random number between 1 and 10</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="number"
+              id="guess-input"
+              min="1"
+              max="10"
+            />
+            <label class="mdl-textfield__label" for="guess-input">Enter your guess</label>
+            <span class="mdl-textfield__error">Pick a number between 1 and 10</span>
+          </div>
+        </form>
+
+        <!-- Calculate Button -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="checkGuess()"
+        >
+          Check the results
+        </button>
+
+        <br />
+
+        <!-- Results Display -->
+        <div id="answers">
+          <!-- Result will be shown here -->
+        </div>
+      </main>
+    </div>
   </body>
 </html>
